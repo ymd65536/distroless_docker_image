@@ -1,0 +1,12 @@
+FROM python:3.9-alpine as builder
+
+WORKDIR /app
+COPY . .
+RUN pip --no-cache-dir install --upgrade pip && pip install --no-cache-dir --target site-packages -r requirements.txt
+
+FROM gcr.io/distroless/python3-debian11:nonroot
+
+WORKDIR /app
+COPY --from=builder /app .
+ENV PYTHONPATH=/app/site-packages
+CMD ["./main.py"]
