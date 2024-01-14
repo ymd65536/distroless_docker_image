@@ -1,0 +1,2 @@
+# distroless_docker_image
+distrolessのイメージでコンテナを作成してみた
