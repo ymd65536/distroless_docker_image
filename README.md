@@ -40,3 +40,13 @@ REPOSITORY                           TAG          IMAGE ID       CREATED        
 test_alpine                          1            374875ee50bb   8 seconds ago   333MB
 test_distroless                      1            e6ee09fc6a8e   2 minutes ago   132MB
 ```
+
+### トラブルシューティングを記載  
+
+### pip packages
+
+パッケージの詳細を見たい時に利用する。
+
+```bash
+pip show boto3
+```
